@@ -30,41 +30,59 @@ NAME_MAPPING = {
 def get_eci_data():
     all_results = {}
     
-    # Loop through all potential pages (Tamil Nadu usually spans across 20+ pages)
     for page_num in range(1, 25):
-        # We append the State Code (S22) and the page number to your Base URL
         url = f"{BASE_URL}statewiseS22{page_num}.htm"
         
         try:
-            # Standard browser User-Agent prevents the ECI from blocking the GitHub server
             headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
             response = requests.get(url, headers=headers, timeout=15)
             
-            # If we hit a 404 error, we've reached the end of the data pages
             if response.status_code == 404:
                 break
                 
-            # Parse the HTML tables using Pandas & StringIO
             tables = pd.read_html(io.StringIO(response.text))
             df = tables[0] 
             
             for index, row in df.iterrows():
-                # Skip header rows or completely empty rows
+                # Skip header rows
                 if pd.isna(row[0]) or "Constituency" in str(row[0]): 
                     continue
                 
-                # Clean up the raw name from the ECI table
+                # 1. Get the Constituency Name (Column 0)
                 raw_ac = str(row[0]).strip().title()
-                
-                # Check if it needs to be mapped to match your GeoJSON
                 ac_name = NAME_MAPPING.get(raw_ac, raw_ac)
                 
-                all_results[ac_name] = {
-                    "candidate": str(row[1]).strip(),
-                    "party": str(row[2]).strip(),
-                    "margin": str(row[4]).strip(), 
-                    "status": str(row[3]).strip()  
-                }
+                try:
+                    # 2. Extract the correct shifted columns
+                    raw_candidate = str(row[2]).strip()   # Col 2 is Leading Candidate
+                    raw_party = str(row[3]).strip().upper() # Col 3 is Party
+                    raw_margin = str(row[6]).strip()      # Col 6 is Margin
+                    raw_status = str(row[7]).strip()      # Col 7 is Status
+                    
+                    # 3. Clean the Party Name so the Map Colors work
+                    if "VETTRI" in raw_party or "TVK" in raw_party:
+                        clean_party = "TVK"
+                    elif "ALL INDIA ANNA" in raw_party or "AIADMK" in raw_party:
+                        clean_party = "AIADMK"
+                    elif "DRAVIDA MUNNETRA" in raw_party or "DMK" in raw_party:
+                        clean_party = "DMK"
+                    elif "BHARATIYA JANATA" in raw_party or "BJP" in raw_party:
+                        clean_party = "BJP"
+                    elif "INDIAN NATIONAL CONGRESS" in raw_party or "INC" in raw_party:
+                        clean_party = "INC"
+                    else:
+                        clean_party = raw_party.split('PARTY')[0].strip()[:10] # Fallback
+                        
+                    all_results[ac_name] = {
+                        "candidate": raw_candidate.title(), # Title casing makes names look cleaner
+                        "party": clean_party,
+                        "margin": f"+{raw_margin}", 
+                        "status": raw_status
+                    }
+                except IndexError:
+                    # Safely skip if a row is malformed
+                    continue
+                    
             print(f"Successfully scraped page {page_num}")
             
         except ValueError:
@@ -75,7 +93,7 @@ def get_eci_data():
             break
             
     return all_results
-
+    
 def main():
     print(f"Fetching LIVE 2026 Counting Data from {BASE_URL}...")
     results = get_eci_data()
