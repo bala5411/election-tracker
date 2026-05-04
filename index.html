@@ -18,6 +18,8 @@
     </header>
 
     <main class="container mx-auto p-4 lg:p-8">
+        <div id="error-banner" class="hidden bg-red-600 text-white font-bold p-4 rounded-xl mb-4 text-sm"></div>
+
         <div id="tab-container" class="flex gap-2 overflow-x-auto pb-4 mb-6 border-b border-slate-800">
             </div>
 
@@ -35,7 +37,7 @@
                 <h3 id="side-ac" class="text-yellow-500 font-black uppercase text-sm tracking-widest">Select a Region</h3>
                 <div class="mt-4">
                     <p id="side-cand" class="text-2xl font-bold leading-tight">--</p>
-                    <p id="side-party" class="text-xs font-mono text-slate-500 mt-1 italic italic">--</p>
+                    <p id="side-party" class="text-xs font-mono text-slate-500 mt-1 italic">--</p>
                 </div>
                 <div class="mt-6 pt-6 border-t border-slate-800">
                     <span class="text-[10px] text-slate-500 uppercase font-bold">Margin / Difference</span>
@@ -50,33 +52,42 @@
         let map, geoLayer, resultsData, districtData;
 
         async function init() {
-            // Load all data
-            const [res1, res2, res3] = await Promise.all([
-                fetch('data/map_data.json').then(r => r.json()),
-                fetch('data/tn_districts.json').then(r => r.json()),
-                fetch('https://raw.githubusercontent.com/datameet/maps/master/assembly-constituencies/TN.geojson').then(r => r.json())
-            ]);
-            
-            resultsData = res1;
-            districtData = res2;
-            const geoJson = res3;
+            try {
+                // 1. Fetch all local data files from your 'data' folder
+                const [res1, res2, res3] = await Promise.all([
+                    fetch('data/map_data.json').then(r => r.json()),
+                    fetch('data/tn_districts.json').then(r => r.json()),
+                    fetch('data/tn_assembly.json').then(r => r.json()) // Now using your local file
+                ]);
+                
+                resultsData = res1;
+                districtData = res2;
+                const geoJson = res3;
 
-            // Initialize Map
-            map = L.map('map', { zoomControl: false }).setView([11.1271, 78.6569], 7);
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png').addTo(map);
+                // 2. Initialize Map
+                map = L.map('map', { zoomControl: false }).setView([11.1271, 78.6569], 7);
+                L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png').addTo(map);
 
-            // Render Tabs
-            const tabContainer = document.getElementById('tab-container');
-            Object.keys(districtData).forEach((dist, index) => {
-                const btn = document.createElement('button');
-                btn.className = `px-6 py-2 rounded-full text-xs font-bold whitespace-nowrap border border-slate-800 hover:bg-slate-800 transition ${index === 0 ? 'bg-yellow-500 text-black' : 'bg-slate-900'}`;
-                btn.innerText = dist;
-                btn.onclick = () => switchDistrict(dist, geoJson, btn);
-                tabContainer.appendChild(btn);
-            });
+                // 3. Render Tabs
+                const tabContainer = document.getElementById('tab-container');
+                Object.keys(districtData).forEach((dist, index) => {
+                    const btn = document.createElement('button');
+                    btn.className = `px-6 py-2 rounded-full text-xs font-bold whitespace-nowrap border border-slate-800 hover:bg-slate-800 transition ${index === 0 ? 'bg-yellow-500 text-black' : 'bg-slate-900 text-white'}`;
+                    btn.innerText = dist;
+                    btn.onclick = () => switchDistrict(dist, geoJson, btn);
+                    tabContainer.appendChild(btn);
+                });
 
-            // Initial view
-            switchDistrict("Greater Chennai", geoJson, tabContainer.firstChild);
+                // 4. Initial view (Default to Chennai)
+                switchDistrict("Chennai", geoJson, tabContainer.firstChild);
+
+            } catch (error) {
+                // If anything fails, show it on the screen!
+                const banner = document.getElementById('error-banner');
+                banner.classList.remove('hidden');
+                banner.innerText = "Error loading data files: " + error.message + " | Please make sure map_data.json, tn_districts.json, and tn_assembly.json are inside the 'data' folder.";
+                console.error(error);
+            }
         }
 
         function switchDistrict(distName, fullGeo, btn) {
@@ -86,20 +97,37 @@
 
             if (geoLayer) map.removeLayer(geoLayer);
 
+            // Filter boundaries for the selected district
             const filtered = {
                 type: "FeatureCollection",
-                features: fullGeo.features.filter(f => districtData[distName].includes(f.properties.AC_NAME))
+                features: fullGeo.features.filter(f => {
+                    // Check both lowercase and uppercase variations just in case!
+                    const acName = f.properties.ac_name || f.properties.AC_NAME;
+                    return districtData[distName].includes(acName);
+                })
             };
 
             geoLayer = L.geoJson(filtered, {
-                style: (f) => ({
-                    fillColor: getCol(resultsData[f.properties.ac_name]?.party),
-                    weight: 1, opacity: 1, color: '#0f172a', fillOpacity: 0.7
-                }),
+                style: (f) => {
+                    const acName = f.properties.ac_name || f.properties.AC_NAME;
+                    return {
+                        fillColor: getCol(resultsData[acName]?.party),
+                        weight: 1, opacity: 1, color: '#0f172a', fillOpacity: 0.7
+                    };
+                },
                 onEachFeature: (f, l) => {
-                    l.on('mouseover', () => updateSidebar(f.properties.AC_NAME));
+                    l.on('mouseover', () => {
+                        const acName = f.properties.ac_name || f.properties.AC_NAME;
+                        updateSidebar(acName);
+                        l.setStyle({ fillOpacity: 0.9, weight: 2, color: '#ffffff' });
+                    });
+                    l.on('mouseout', () => {
+                        l.setStyle({ fillOpacity: 0.7, weight: 1, color: '#0f172a' });
+                    });
                 }
             }).addTo(map);
+            
+            // Zoom to fit the district
             map.fitBounds(geoLayer.getBounds());
         }
 
@@ -108,7 +136,7 @@
         }
 
         function updateSidebar(ac) {
-            const d = resultsData[ac] || { candidate: 'Unknown', party: 'N/A', margin: '0', status: 'Counting' };
+            const d = resultsData[ac] || { candidate: 'Pending', party: 'N/A', margin: '0', status: 'Counting' };
             document.getElementById('side-ac').innerText = ac;
             document.getElementById('side-cand').innerText = d.candidate;
             document.getElementById('side-party').innerText = d.party;
