@@ -1,8 +1,16 @@
 {
-  "Perambur": {
-    "candidate": "Awaiting Data",
-    "party": "N/A",
-    "margin": "0",
-    "status": "Counting"
-  }
+  "Gummidipoondi": { "candidate": "T.J. Govindarajan", "party": "DMK", "margin": "+4,231", "status": "Leading" },
+  "Ponneri": { "candidate": "Durai Chandrasekar", "party": "TVK", "margin": "+8,102", "status": "Leading" },
+  "Tiruttani": { "candidate": "S. Chandran", "party": "AIADMK", "margin": "+1,450", "status": "Leading" },
+  "Thiruvallur": { "candidate": "V.G. Raajendran", "party": "TVK", "margin": "+12,304", "status": "Leading" },
+  "Poonamallee": { "candidate": "A. Krishnaswamy", "party": "DMK", "margin": "+890", "status": "Leading" },
+  "Avadi": { "candidate": "S.M. Nasar", "party": "TVK", "margin": "+5,600", "status": "WON" },
+  "RK Nagar": { "candidate": "Marie Wilson", "party": "TVK", "margin": "+3,498", "status": "Leading" },
+  "Perambur": { "candidate": "Vijay", "party": "TVK", "margin": "+34,482", "status": "WON" },
+  "Kolathur": { "candidate": "M.K. Stalin", "party": "DMK", "margin": "-6,504", "status": "Trailing" },
+  "Villivakkam": { "candidate": "Aadhav Arjuna", "party": "TVK", "margin": "+8,644", "status": "Leading" },
+  "Thiru-Vi-Ka-Nagar": { "candidate": "M.R. Pallavi", "party": "TVK", "margin": "+6,398", "status": "Leading" },
+  "Egmore": { "candidate": "I. Paranthamen", "party": "DMK", "margin": "+1,200", "status": "Leading" },
+  "Royapuram": { "candidate": "D. Jayakumar", "party": "AIADMK", "margin": "+3,100", "status": "Leading" },
+  "Chepauk-Thiruvallikeni": { "candidate": "Udhayanidhi Stalin", "party": "DMK", "margin": "+1,770", "status": "Leading" }
 }
