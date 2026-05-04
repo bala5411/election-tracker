@@ -12,7 +12,7 @@
     "status": "nan"
   },
   "Leading In": {
-    "candidate": "46",
+    "candidate": "47",
     "party": "NAN",
     "margin": "+nan",
     "status": "nan"
@@ -24,7 +24,7 @@
     "status": "nan"
   },
   "Trailing In": {
-    "candidate": "45",
+    "candidate": "44",
     "party": "NAN",
     "margin": "+nan",
     "status": "nan"
@@ -56,8 +56,8 @@
   "Ambasamudram": {
     "candidate": "Dr.Esakki Subaya",
     "party": "AIADMK",
-    "margin": "+11191.0",
-    "status": "22/23"
+    "margin": "+10245.0",
+    "status": "23/23"
   },
   "Indian National Congress": {
     "candidate": "Nan",
@@ -164,8 +164,8 @@
   "Avadi": {
     "candidate": "R.Ramesh Kumar",
     "party": "TVK",
-    "margin": "+39060.0",
-    "status": "14/26"
+    "margin": "+41308.0",
+    "status": "15/26"
   },
   "Avanashi": {
     "candidate": "Kamali.S",
@@ -248,8 +248,8 @@
   "Coimbatore North": {
     "candidate": "V. Sampathkumar",
     "party": "TVK",
-    "margin": "+9163.0",
-    "status": "10/25"
+    "margin": "+9884.0",
+    "status": "11/25"
   },
   "Coimbatore South": {
     "candidate": "V Senthilbalaji",
@@ -278,8 +278,8 @@
   "Cumbum": {
     "candidate": "Jeganathmishra Pla",
     "party": "TVK",
-    "margin": "+2832.0",
-    "status": "11/25"
+    "margin": "+2637.0",
+    "status": "12/25"
   },
   "Dharapuram": {
     "candidate": "Sathyabama.P",
@@ -314,8 +314,8 @@
   "Edappadi": {
     "candidate": "Edappadi Palaniswami. K",
     "party": "AIADMK",
-    "margin": "+82438.0",
-    "status": "21/25"
+    "margin": "+86286.0",
+    "status": "22/25"
   },
   "Independent": {
     "candidate": "Nan",
@@ -386,8 +386,8 @@
   "Gummidipoondi": {
     "candidate": "S.Vijayakumar",
     "party": "TVK",
-    "margin": "+17793.0",
-    "status": "15/25"
+    "margin": "+19483.0",
+    "status": "16/25"
   },
   "Harbour": {
     "candidate": "P K Sekarbabu",
@@ -420,10 +420,10 @@
     "status": "17/21"
   },
   "Kadayanallur": {
-    "candidate": "Rajendran. T. M",
-    "party": "DMK",
-    "margin": "+193.0",
-    "status": "14/26"
+    "candidate": "C. Krishnamurali",
+    "party": "AIADMK",
+    "margin": "+232.0",
+    "status": "15/26"
   },
   "Kalasapakkam": {
     "candidate": "Agri Krishnamurthy. S S",
@@ -470,8 +470,8 @@
   "Katpadi": {
     "candidate": "V. Ramu",
     "party": "AIADMK",
-    "margin": "+1313.0",
-    "status": "10/20"
+    "margin": "+141.0",
+    "status": "11/20"
   },
   "Kattumannarkoil": {
     "candidate": "L.E. Jothimani",
@@ -530,8 +530,8 @@
   "Kovilpatti": {
     "candidate": "Karunanithi.K",
     "party": "DMK",
-    "margin": "+5265.0",
-    "status": "14/23"
+    "margin": "+4605.0",
+    "status": "15/23"
   },
   "Krishnagiri": {
     "candidate": "Mukundhan.P",
@@ -596,8 +596,8 @@
   "Madavaram": {
     "candidate": "M.L.Vijayprabhu",
     "party": "TVK",
-    "margin": "+86155.0",
-    "status": "17/19"
+    "margin": "+91600.0",
+    "status": "18/19"
   },
   "Madurai Central": {
     "candidate": "Madhar Badhurudeen",
@@ -662,8 +662,8 @@
   "Manapparai": {
     "candidate": "R. Kathiravan",
     "party": "TVK",
-    "margin": "+31.0",
-    "status": "20/25"
+    "margin": "+369.0",
+    "status": "21/25"
   },
   "Mannargudi": {
     "candidate": "Kamaraj. S",
@@ -704,8 +704,8 @@
   "Mudhukulathur": {
     "candidate": "R.S.Rajakannappan",
     "party": "DMK",
-    "margin": "+11356.0",
-    "status": "20/30"
+    "margin": "+11994.0",
+    "status": "21/30"
   },
   "Musiri": {
     "candidate": "M.Vignesh",
@@ -762,16 +762,16 @@
     "status": "16/19"
   },
   "Nilakkottai": {
-    "candidate": "Nagajothi.S",
-    "party": "DMK",
-    "margin": "+520.0",
-    "status": "12/23"
+    "candidate": "Ayyanar.R",
+    "party": "TVK",
+    "margin": "+16.0",
+    "status": "13/23"
   },
   "Oddanchatram": {
     "candidate": "Sakkarapani. R",
     "party": "DMK",
-    "margin": "+28835.0",
-    "status": "16/24"
+    "margin": "+31339.0",
+    "status": "17/24"
   },
   "Omalur": {
     "candidate": "Mani. R",
@@ -794,8 +794,8 @@
   "Padmanabhapuram": {
     "candidate": "Chellaswamy. R",
     "party": "COMMUNIST",
-    "margin": "+10209.0",
-    "status": "15/23"
+    "margin": "+12036.0",
+    "status": "16/23"
   },
   "Palacodu": {
     "candidate": "Anbalagan. K.P.",
@@ -824,8 +824,8 @@
   "Pallavaram": {
     "candidate": "J.Kamatchi",
     "party": "TVK",
-    "margin": "+27588.0",
-    "status": "17/34"
+    "margin": "+29315.0",
+    "status": "18/34"
   },
   "Panruti": {
     "candidate": "Mohan. K",
@@ -870,10 +870,10 @@
     "status": "13/23"
   },
   "Pennagaram": {
-    "candidate": "Selvam. V.",
-    "party": "PATTALI MA",
-    "margin": "+150.0",
-    "status": "14/23"
+    "candidate": "Gajendran. S.",
+    "party": "TVK",
+    "margin": "+1576.0",
+    "status": "15/23"
   },
   "Perambalur": {
     "candidate": "Sivakumar. K",
@@ -956,26 +956,26 @@
   "Ramanathapuram": {
     "candidate": "Katharbatcha Muthuramalingam",
     "party": "DMK",
-    "margin": "+15209.0",
-    "status": "25/29"
+    "margin": "+14803.0",
+    "status": "26/29"
   },
   "Ranipet": {
     "candidate": "R. Gandhi",
     "party": "DMK",
-    "margin": "+1569.0",
-    "status": "14/22"
+    "margin": "+845.0",
+    "status": "15/22"
   },
   "Rasipuram": {
     "candidate": "Logesh Tamilselvan D",
     "party": "TVK",
-    "margin": "+14061.0",
-    "status": "15/21"
+    "margin": "+15193.0",
+    "status": "16/21"
   },
   "Rishivandiyam": {
     "candidate": "Karthikeyan K",
     "party": "DMK",
-    "margin": "+3101.0",
-    "status": "11/25"
+    "margin": "+2802.0",
+    "status": "12/25"
   },
   "Royapuram": {
     "candidate": "K.V. Vijay Damu",
@@ -998,8 +998,8 @@
   "Salem South": {
     "candidate": "Vijay Tamilan Parthiban. A",
     "party": "TVK",
-    "margin": "+29324.0",
-    "status": "16/20"
+    "margin": "+30634.0",
+    "status": "17/20"
   },
   "Salem West": {
     "candidate": "Lakshmanan.S",
@@ -1022,8 +1022,8 @@
   "Sankari": {
     "candidate": "Vetrivel. S",
     "party": "AIADMK",
-    "margin": "+4578.0",
-    "status": "18/25"
+    "margin": "+5906.0",
+    "status": "19/25"
   },
   "Sattur": {
     "candidate": "Nainar Nagenthran",
@@ -1082,8 +1082,8 @@
   "Sriperumbudur": {
     "candidate": "Thennarasu.K",
     "party": "TVK",
-    "margin": "+26478.0",
-    "status": "16/32"
+    "margin": "+28623.0",
+    "status": "17/32"
   },
   "Srirangam": {
     "candidate": "Ramesh",
@@ -1094,8 +1094,8 @@
   "Srivaikuntam": {
     "candidate": "Shanmuganathan. S. P",
     "party": "AIADMK",
-    "margin": "+207.0",
-    "status": "19/21"
+    "margin": "+136.0",
+    "status": "20/21"
   },
   "Srivilliputhur": {
     "candidate": "Mahalingam.P",
@@ -1166,20 +1166,20 @@
   "Thiruporur": {
     "candidate": "B.Vijayaraj",
     "party": "TVK",
-    "margin": "+25891.0",
-    "status": "14/29"
+    "margin": "+27550.0",
+    "status": "15/29"
   },
   "Thiruthuraipoondi": {
     "candidate": "Marimuthu.K",
     "party": "COMMUNIST",
-    "margin": "+8551.0",
-    "status": "17/21"
+    "margin": "+9690.0",
+    "status": "18/21"
   },
   "Thiruvaiyaru": {
     "candidate": "Durai. Chandrasekaran",
     "party": "DMK",
-    "margin": "+8121.0",
-    "status": "12/25"
+    "margin": "+7803.0",
+    "status": "13/25"
   },
   "Thiruvallur": {
     "candidate": "Dr. T. Arunkumar",
@@ -1208,8 +1208,8 @@
   "Thiruvottiyur": {
     "candidate": "Senthil Kumar. N",
     "party": "TVK",
-    "margin": "+39525.0",
-    "status": "17/25"
+    "margin": "+41496.0",
+    "status": "18/25"
   },
   "T. Nagar": {
     "candidate": "Anand N",
@@ -1220,14 +1220,14 @@
   "Thondamuthur": {
     "candidate": "S.P.Velumani",
     "party": "AIADMK",
-    "margin": "+9848.0",
-    "status": "14/27"
+    "margin": "+10598.0",
+    "status": "15/27"
   },
   "Thoothukkudi": {
     "candidate": "Srinath",
     "party": "TVK",
-    "margin": "+28169.0",
-    "status": "18/26"
+    "margin": "+29857.0",
+    "status": "19/26"
   },
   "Thousand Lights": {
     "candidate": "Prabhakar.J.C.D",
@@ -1280,8 +1280,8 @@
   "Tirukkoyilur": {
     "candidate": "Vijay R Baranibalaaji",
     "party": "TVK",
-    "margin": "+972.0",
-    "status": "14/24"
+    "margin": "+1703.0",
+    "status": "15/24"
   },
   "Tirunelveli": {
     "candidate": "Murughan.R.S.",
@@ -1340,8 +1340,8 @@
   "Udumalaipettai": {
     "candidate": "Radhakrishnan K.",
     "party": "AIADMK",
-    "margin": "+2832.0",
-    "status": "18/22"
+    "margin": "+1602.0",
+    "status": "19/22"
   },
   "Ulundurpettai": {
     "candidate": "Vasanthavel G R",
@@ -1383,7 +1383,7 @@
     "candidate": "Syed Farooq Basha Ssb",
     "party": "INDIAN UNI",
     "margin": "+2572.0",
-    "status": "23/25"
+    "status": "23/24"
   },
   "Vanur": {
     "candidate": "Gowtham D",
@@ -1434,10 +1434,10 @@
     "status": "19/25"
   },
   "Vikravandi": {
-    "candidate": "Vijai Vadivel A",
-    "party": "TVK",
-    "margin": "+169.0",
-    "status": "9/23"
+    "candidate": "Sivakumar C",
+    "party": "PATTALI MA",
+    "margin": "+730.0",
+    "status": "10/23"
   },
   "Vilathikulam": {
     "candidate": "Markandayan G V",
@@ -1460,8 +1460,8 @@
   "Viluppuram": {
     "candidate": "Lakshmanan R",
     "party": "DMK",
-    "margin": "+1745.0",
-    "status": "17/24"
+    "margin": "+1491.0",
+    "status": "18/24"
   },
   "Viralimalai": {
     "candidate": "Vijayabaskar. C",
