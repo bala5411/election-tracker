@@ -313,8 +313,13 @@
                 const p = seat.party;
                 if (!stats[p]) stats[p] = { lead: 0, won: 0, total: 0 };
                 
-                if (seat.status.toUpperCase() === 'WON') stats[p].won++;
-                else stats[p].lead++;
+                // IMPROVED LOGIC: Check for "WON" or "Winner" regardless of case
+                const statusText = String(seat.status).toUpperCase().trim();
+                if (statusText === 'WON' || statusText === 'WINNER') {
+                    stats[p].won++;
+                } else {
+                    stats[p].lead++;
+                }
                 
                 stats[p].total++;
             });
@@ -328,7 +333,7 @@
                 const pColor = partyColors[party] || partyColors['OTH'];
                 
                 tbody.innerHTML += `
-                    <tr class="hover:bg-slate-800/50 transition">
+                    <tr class="hover:bg-slate-800/50 transition border-b border-slate-800/30">
                         <td class="py-2.5 font-bold flex items-center gap-2">
                             <span class="w-2.5 h-2.5 rounded-sm" style="background: ${pColor}"></span>
                             ${party}
@@ -340,7 +345,7 @@
                 `;
             });
         }
-
+        
         function buildVIPTracker() {
             const container = document.getElementById('vip-tracker');
             container.innerHTML = '';
