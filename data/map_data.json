@@ -12,19 +12,19 @@
     "status": "nan"
   },
   "Leading In": {
-    "candidate": "4",
+    "candidate": "0",
     "party": "OTH",
     "margin": "+nan",
     "status": "nan"
   },
   "Won In": {
-    "candidate": "103",
+    "candidate": "107",
     "party": "OTH",
     "margin": "+nan",
     "status": "nan"
   },
   "Trailing In": {
-    "candidate": "4",
+    "candidate": "1",
     "party": "OTH",
     "margin": "+nan",
     "status": "nan"
@@ -1046,8 +1046,8 @@
   "Sholingur": {
     "candidate": "G.Kapil",
     "party": "TVK",
-    "margin": "+3163.0",
-    "status": "23/25"
+    "margin": "+5686.0",
+    "status": "26/26"
   },
   "Shozhinganallur": {
     "candidate": "Ecr P Saravanan",
