@@ -1,0 +1,31 @@
+name: Election Data Sync
+on:
+  schedule:
+    - cron: '*/5 * * * *' # Every 5 minutes
+  workflow_dispatch:      # Manual trigger button
+
+jobs:
+  update-results:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Tools
+        run: pip install pandas requests lxml html5lib
+
+      - name: Scrape Data
+        run: python scraper.py
+
+      - name: Commit & Push
+        run: |
+          git config --global user.name 'ElectionBot'
+          git config --global user.email 'bot@github.com'
+          git add data/map_data.json
+          git commit -m "Live Update: $(date)" || exit 0
+          git push
