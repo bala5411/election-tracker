@@ -3,177 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TN Election 2026 - Master Dashboard</title>
+    <title>TN Election 2026 - Master Map Tracker</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
-    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+<body class="bg-slate-950 text-white font-sans">
 
-    <header class="bg-red-800 border-b-4 border-yellow-500 p-4 sticky top-0 z-50 shadow-2xl">
+    <header class="bg-red-800 border-b-4 border-yellow-500 p-4 sticky top-0 z-[1001] shadow-2xl">
         <div class="container mx-auto flex justify-between items-center">
-            <div>
-                <h1 class="text-2xl font-black italic tracking-tighter">TN ELECTION 2026</h1>
-                <p class="text-[10px] font-bold text-yellow-400 uppercase tracking-widest">Global Live Counting Center</p>
-            </div>
-            <div class="text-right">
-                <span class="text-xs font-mono text-slate-400 uppercase">Syncing in: <span id="timer" class="text-white font-bold">60</span>s</span>
-                <div class="text-[10px] text-green-400 font-bold uppercase" id="last-sync">Initial Loading...</div>
-            </div>
+            <h1 class="text-xl font-black italic uppercase">TN Election 2026 Dashboard</h1>
+            <div class="text-right"><span class="text-[10px] text-slate-300">AUTO-REFRESH: <span id="timer">60</span>s</span></div>
         </div>
     </header>
 
-    <main class="container mx-auto p-4 lg:p-8 max-w-7xl">
-        
-        <div class="bg-slate-900 p-6 rounded-3xl border border-slate-800 shadow-xl mb-10">
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="text-xl font-black uppercase tracking-tight">State Assembly Trends</h2>
-                <span class="text-xs font-bold bg-slate-800 px-3 py-1 rounded-full text-slate-400">TOTAL: 234 SEATS | MAJORITY: 118</span>
+    <main class="container mx-auto p-4 lg:p-8">
+        <div id="tab-container" class="flex gap-2 overflow-x-auto pb-4 mb-6 border-b border-slate-800">
             </div>
-            <div class="w-full h-12 bg-slate-950 rounded-full flex overflow-hidden ring-4 ring-slate-900">
-                <div class="bg-yellow-500 transition-all duration-1000 shadow-[0_0_20px_rgba(234,179,8,0.3)]" style="width: 46%"></div>
-                <div class="bg-green-600 transition-all duration-1000" style="width: 32%"></div>
-                <div class="bg-red-600 transition-all duration-1000" style="width: 18%"></div>
-                <div class="bg-slate-600 transition-all duration-1000" style="width: 4%"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <div class="lg:col-span-3 relative bg-slate-900 rounded-3xl border border-slate-800 h-[600px] overflow-hidden shadow-2xl">
+                <div id="map" class="h-full w-full"></div>
+                <div class="absolute bottom-4 left-4 bg-slate-900/90 p-3 rounded-lg border border-slate-700 z-[1000] text-[10px] space-y-1">
+                    <div class="flex items-center gap-2"><span class="w-3 h-3 bg-yellow-500"></span> TVK (Vijay)</div>
+                    <div class="flex items-center gap-2"><span class="w-3 h-3 bg-green-600"></span> AIADMK+</div>
+                    <div class="flex items-center gap-2"><span class="w-3 h-3 bg-red-600"></span> DMK+</div>
+                </div>
             </div>
-            <div class="grid grid-cols-4 mt-6 gap-4">
-                <div class="text-center p-2 rounded-xl bg-yellow-500/10 border border-yellow-500/20"><p class="text-[10px] font-bold text-yellow-500">TVK</p><p class="text-3xl font-black">108</p></div>
-                <div class="text-center p-2 rounded-xl bg-green-500/10 border border-green-500/20"><p class="text-[10px] font-bold text-green-500">AIADMK+</p><p class="text-3xl font-black">75</p></div>
-                <div class="text-center p-2 rounded-xl bg-red-500/10 border border-red-500/20"><p class="text-[10px] font-bold text-red-500">DMK+</p><p class="text-3xl font-black">44</p></div>
-                <div class="text-center p-2 rounded-xl bg-slate-500/10 border border-slate-500/20"><p class="text-[10px] font-bold text-slate-400">OTH</p><p class="text-3xl font-black">7</p></div>
+
+            <div id="sidebar" class="bg-slate-900 p-6 rounded-3xl border border-slate-800 shadow-xl flex flex-col justify-center">
+                <h3 id="side-ac" class="text-yellow-500 font-black uppercase text-sm tracking-widest">Select a Region</h3>
+                <div class="mt-4">
+                    <p id="side-cand" class="text-2xl font-bold leading-tight">--</p>
+                    <p id="side-party" class="text-xs font-mono text-slate-500 mt-1 italic italic">--</p>
+                </div>
+                <div class="mt-6 pt-6 border-t border-slate-800">
+                    <span class="text-[10px] text-slate-500 uppercase font-bold">Margin / Difference</span>
+                    <p id="side-margin" class="text-3xl font-black">0</p>
+                    <p id="side-status" class="mt-2 inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-slate-800">N/A</p>
+                </div>
             </div>
         </div>
-
-        <section class="mb-12">
-            <h3 class="text-xl font-black mb-4 flex items-center gap-2 uppercase italic text-yellow-500">
-                <span class="w-1 h-6 bg-yellow-500"></span> Key Leaders Status
-            </h3>
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden overflow-x-auto shadow-2xl">
-                <table class="w-full text-left">
-                    <thead class="bg-slate-950 text-slate-500 text-[10px] uppercase tracking-widest">
-                        <tr>
-                            <th class="px-6 py-4">Leader Name</th>
-                            <th class="px-6 py-4">Constituency</th>
-                            <th class="px-6 py-4">Party</th>
-                            <th class="px-6 py-4">Status</th>
-                            <th class="px-6 py-4 text-right">Live Margin</th>
-                        </tr>
-                    </thead>
-                    <tbody id="leaders-body" class="divide-y divide-slate-800 text-sm">
-                        </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section>
-            <h3 class="text-xl font-black mb-6 flex items-center gap-2 uppercase italic text-blue-400">
-                <span class="w-1 h-6 bg-blue-500"></span> Major City Dashboards
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-slate-900 rounded-3xl border border-slate-800 shadow-2xl">
-                    <div class="bg-slate-800/50 p-4 font-black text-center border-b border-slate-700 tracking-widest text-xs">GREATER CHENNAI (16)</div>
-                    <div class="h-[500px] overflow-y-auto p-4 space-y-3" id="chennai-list"></div>
-                </div>
-                <div class="bg-slate-900 rounded-3xl border border-slate-800 shadow-2xl">
-                    <div class="bg-slate-800/50 p-4 font-black text-center border-b border-slate-700 tracking-widest text-xs">GREATER TRICHY (9)</div>
-                    <div class="h-[500px] overflow-y-auto p-4 space-y-3" id="trichy-list"></div>
-                </div>
-                <div class="bg-slate-900 rounded-3xl border border-slate-800 shadow-2xl">
-                    <div class="bg-slate-800/50 p-4 font-black text-center border-b border-slate-700 tracking-widest text-xs">GREATER COIMBATORE (10)</div>
-                    <div class="h-[500px] overflow-y-auto p-4 space-y-3" id="coimbatore-list"></div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <script>
-        const leaders = [
-            { name: "Vijay", const: "Perambur", party: "TVK", status: "WON", margin: "+34,482" },
-            { name: "M.K. Stalin", const: "Kolathur", party: "DMK", status: "Trailing", margin: "-6,504" },
-            { name: "E. Palaniswami", const: "Edappadi", party: "AIADMK", status: "WON", margin: "+41,737" },
-            { name: "K.N. Nehru", const: "Trichy West", party: "DMK", status: "Leading", margin: "+2,674" },
-            { name: "Sundar C", const: "Madurai Central", party: "AIADMK", status: "Trailing", margin: "-11,051" },
-            { name: "Udhayanidhi Stalin", const: "Chepauk", party: "DMK", status: "Leading", margin: "+1,770" },
-            { name: "Senthil Balaji", const: "Coimbatore S", party: "DMK", status: "Trailing", margin: "-276" },
-            { name: "Seeman", const: "Karaikudi", party: "NTK", status: "Trailing", margin: "-14,200" },
-            { name: "Bussy Anand", const: "T. Nagar", party: "TVK", status: "Leading", margin: "+7,858" },
-            { name: "Duraimurugan", const: "Katpadi", party: "DMK", status: "Trailing", margin: "-8,900" }
-        ];
+        let map, geoLayer, resultsData, districtData;
 
-        const cities = {
-            chennai: [
-                { ac: "RK Nagar", cand: "Marie Wilson", party: "TVK", margin: "+3,498" },
-                { ac: "Perambur", cand: "Vijay", party: "TVK", margin: "+34,482" },
-                { ac: "Kolathur", cand: "V.S. Babu", party: "TVK", margin: "+6,504" },
-                { ac: "Villivakkam", cand: "Aadhav Arjuna", party: "TVK", margin: "+8,644" },
-                { ac: "Thiru-Vi-Ka", cand: "M.R. Pallavi", party: "TVK", margin: "+6,398" },
-                { ac: "Anna Nagar", cand: "V.K. Ramkumar", party: "TVK", margin: "+10,272" },
-                { ac: "Saidapet", cand: "Arul Prakasam", party: "TVK", margin: "+12,248" },
-                { ac: "Chepauk", cand: "Udhayanidhi S", party: "DMK", margin: "+1,770" }
-            ],
-            trichy: [
-                { ac: "Trichy East", cand: "Inigo Irudayaraj", party: "DMK", margin: "+1,102" },
-                { ac: "Trichy West", cand: "K.N. Nehru", party: "DMK", margin: "+2,674" },
-                { ac: "Srirangam", cand: "Ramesh", party: "AIADMK", margin: "+3,287" },
-                { ac: "Thiverumbur", cand: "Anbil Mahesh", party: "DMK", margin: "-450" },
-                { ac: "Manapparai", cand: "R. Kathiravan", party: "TVK", margin: "+4,664" },
-                { ac: "Musiri", cand: "M. Vignesh", party: "TVK", margin: "+9,760" }
-            ],
-            coimbatore: [
-                { ac: "CBE South", cand: "V. Senthilkumar", party: "TVK", margin: "+276" },
-                { ac: "CBE North", cand: "Vanathi S", party: "BJP", margin: "+656" },
-                { ac: "Singanallur", cand: "Sri Giri Prasath", party: "TVK", margin: "+6,533" },
-                { ac: "Kavundampalayam", cand: "Kanimozhi S", party: "TVK", margin: "+10,666" },
-                { ac: "Kinathukadavu", cand: "Vignesh K", party: "TVK", margin: "+9,650" }
-            ]
-        };
+        async function init() {
+            // Load all data
+            const [res1, res2, res3] = await Promise.all([
+                fetch('data/map_data.json').then(r => r.json()),
+                fetch('data/tn_districts.json').then(r => r.json()),
+                fetch('https://raw.githubusercontent.com/datameet/maps/master/assembly-constituencies/TN.geojson').then(r => r.json())
+            ]);
+            
+            resultsData = res1;
+            districtData = res2;
+            const geoJson = res3;
 
-        function render() {
-            // Leader Table
-            document.getElementById('leaders-body').innerHTML = leaders.map(l => `
-                <tr class="hover:bg-slate-800/50">
-                    <td class="px-6 py-4 font-bold">${l.name}</td>
-                    <td class="px-6 py-4 text-slate-400">${l.const}</td>
-                    <td class="px-6 py-4 text-[10px] font-mono">${l.party}</td>
-                    <td class="px-6 py-4">
-                        <span class="px-2 py-0.5 rounded text-[10px] font-black ${l.status==='Trailing' ? 'bg-red-500/20 text-red-500':'bg-green-500/20 text-green-500'}">${l.status}</span>
-                    </td>
-                    <td class="px-6 py-4 text-right font-mono font-bold ${l.margin.includes('-')?'text-red-500':'text-green-500'}">${l.margin}</td>
-                </tr>
-            `).join('');
+            // Initialize Map
+            map = L.map('map', { zoomControl: false }).setView([11.1271, 78.6569], 7);
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png').addTo(map);
 
-            // City Lists
-            const populate = (id, data) => {
-                document.getElementById(id).innerHTML = data.map(i => `
-                    <div class="bg-slate-950/50 p-3 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
-                        <div class="flex justify-between items-start mb-1">
-                            <span class="text-[10px] text-slate-500 uppercase font-black tracking-widest">${i.ac}</span>
-                            <span class="text-[10px] font-mono ${i.margin.includes('-')?'text-red-500':'text-green-500'} font-bold">${i.margin}</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-sm">${i.cand}</span>
-                            <span class="text-[9px] px-1.5 py-0.5 rounded bg-slate-800 text-slate-400 font-bold">${i.party}</span>
-                        </div>
-                    </div>
-                `).join('');
-            };
-            populate('chennai-list', cities.chennai);
-            populate('trichy-list', cities.trichy);
-            populate('coimbatore-list', cities.coimbatore);
+            // Render Tabs
+            const tabContainer = document.getElementById('tab-container');
+            Object.keys(districtData).forEach((dist, index) => {
+                const btn = document.createElement('button');
+                btn.className = `px-6 py-2 rounded-full text-xs font-bold whitespace-nowrap border border-slate-800 hover:bg-slate-800 transition ${index === 0 ? 'bg-yellow-500 text-black' : 'bg-slate-900'}`;
+                btn.innerText = dist;
+                btn.onclick = () => switchDistrict(dist, geoJson, btn);
+                tabContainer.appendChild(btn);
+            });
 
-            document.getElementById('last-sync').innerText = "Last Update: " + new Date().toLocaleTimeString();
+            // Initial view
+            switchDistrict("Greater Chennai", geoJson, tabContainer.firstChild);
         }
 
-        let seconds = 60;
+        function switchDistrict(distName, fullGeo, btn) {
+            // UI Update
+            document.querySelectorAll('#tab-container button').forEach(b => b.className = b.className.replace('bg-yellow-500 text-black', 'bg-slate-900 text-white'));
+            btn.className = btn.className.replace('bg-slate-900 text-white', 'bg-yellow-500 text-black');
+
+            if (geoLayer) map.removeLayer(geoLayer);
+
+            const filtered = {
+                type: "FeatureCollection",
+                features: fullGeo.features.filter(f => districtData[distName].includes(f.properties.AC_NAME))
+            };
+
+            geoLayer = L.geoJson(filtered, {
+                style: (f) => ({
+                    fillColor: getCol(resultsData[f.properties.AC_NAME]?.party),
+                    weight: 1, opacity: 1, color: '#0f172a', fillOpacity: 0.7
+                }),
+                onEachFeature: (f, l) => {
+                    l.on('mouseover', () => updateSidebar(f.properties.AC_NAME));
+                }
+            }).addTo(map);
+            map.fitBounds(geoLayer.getBounds());
+        }
+
+        function getCol(p) {
+            return p === 'TVK' ? '#eab308' : p === 'AIADMK' ? '#16a34a' : p === 'DMK' ? '#ef4444' : '#334155';
+        }
+
+        function updateSidebar(ac) {
+            const d = resultsData[ac] || { candidate: 'Unknown', party: 'N/A', margin: '0', status: 'Counting' };
+            document.getElementById('side-ac').innerText = ac;
+            document.getElementById('side-cand').innerText = d.candidate;
+            document.getElementById('side-party').innerText = d.party;
+            document.getElementById('side-margin').innerText = d.margin;
+            document.getElementById('side-margin').className = `text-3xl font-black ${d.margin.includes('-') ? 'text-red-500' : 'text-green-500'}`;
+            document.getElementById('side-status').innerText = d.status;
+        }
+
+        // Timer Logic
+        let sec = 60;
         setInterval(() => {
-            seconds--;
-            document.getElementById('timer').innerText = seconds;
-            if (seconds <= 0) { render(); seconds = 60; }
+            sec--;
+            document.getElementById('timer').innerText = sec;
+            if (sec <= 0) { location.reload(); }
         }, 1000);
 
-        render();
+        init();
     </script>
 </body>
 </html>
