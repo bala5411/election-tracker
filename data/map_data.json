@@ -1,16 +1,1496 @@
 {
-  "Gummidipoondi": { "candidate": "T.J. Govindarajan", "party": "DMK", "margin": "+4,231", "status": "Leading" },
-  "Ponneri": { "candidate": "Durai Chandrasekar", "party": "TVK", "margin": "+8,102", "status": "Leading" },
-  "Tiruttani": { "candidate": "S. Chandran", "party": "AIADMK", "margin": "+1,450", "status": "Leading" },
-  "Thiruvallur": { "candidate": "V.G. Raajendran", "party": "TVK", "margin": "+12,304", "status": "Leading" },
-  "Poonamallee": { "candidate": "A. Krishnaswamy", "party": "DMK", "margin": "+890", "status": "Leading" },
-  "Avadi": { "candidate": "S.M. Nasar", "party": "TVK", "margin": "+5,600", "status": "WON" },
-  "RK Nagar": { "candidate": "Marie Wilson", "party": "TVK", "margin": "+3,498", "status": "Leading" },
-  "Perambur": { "candidate": "Vijay", "party": "TVK", "margin": "+34,482", "status": "WON" },
-  "Kolathur": { "candidate": "M.K. Stalin", "party": "DMK", "margin": "-6,504", "status": "Trailing" },
-  "Villivakkam": { "candidate": "Aadhav Arjuna", "party": "TVK", "margin": "+8,644", "status": "Leading" },
-  "Thiru-Vi-Ka-Nagar": { "candidate": "M.R. Pallavi", "party": "TVK", "margin": "+6,398", "status": "Leading" },
-  "Egmore": { "candidate": "I. Paranthamen", "party": "DMK", "margin": "+1,200", "status": "Leading" },
-  "Royapuram": { "candidate": "D. Jayakumar", "party": "AIADMK", "margin": "+3,100", "status": "Leading" },
-  "Chepauk-Thiruvallikeni": { "candidate": "Udhayanidhi Stalin", "party": "DMK", "margin": "+1,770", "status": "Leading" }
+  "Alandur": {
+    "candidate": "28",
+    "party": "M.HARISH",
+    "margin": "T.M.ANBARASAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Tamilaga Vettri Kazhagam": {
+    "candidate": "iParty Wise State TrendsLeading In:106Won In:1Trailing In:68",
+    "party": "nan",
+    "margin": "nan",
+    "status": "nan"
+  },
+  "Leading In": {
+    "candidate": ":",
+    "party": "47",
+    "margin": "nan",
+    "status": "nan"
+  },
+  "Won In": {
+    "candidate": ":",
+    "party": "0",
+    "margin": "nan",
+    "status": "nan"
+  },
+  "Trailing In": {
+    "candidate": ":",
+    "party": "44",
+    "margin": "nan",
+    "status": "nan"
+  },
+  "Dravida Munnetra Kazhagam": {
+    "candidate": "iParty Wise State TrendsLeading In:56Won In:3Trailing In:84",
+    "party": "nan",
+    "margin": "nan",
+    "status": "nan"
+  },
+  "Alangudi": {
+    "candidate": "182",
+    "party": "SIVA.V.MEYYANATHAN",
+    "margin": "DHANA VIMAL",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "All India Anna Dravida Munnetra Kazhagam": {
+    "candidate": "iParty Wise State TrendsLeading In:47Won In:0Trailing In:44",
+    "party": "nan",
+    "margin": "nan",
+    "status": "nan"
+  },
+  "Alangulam": {
+    "candidate": "223",
+    "party": "PAUL MANOJ PANDIAN",
+    "margin": "K R P PRABAKARAN",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Ambasamudram": {
+    "candidate": "225",
+    "party": "DR.ESAKKI SUBAYA",
+    "margin": "V.P.DURAI",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Indian National Congress": {
+    "candidate": "iParty Wise State TrendsLeading In:4Won In:1Trailing In:9",
+    "party": "nan",
+    "margin": "nan",
+    "status": "nan"
+  },
+  "Ambattur": {
+    "candidate": "8",
+    "party": "BALAMURUGAN.G",
+    "margin": "DR A.P. POORNIMA",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Ambur": {
+    "candidate": "48",
+    "party": "IMTHIYAZ PANDARATTUDU ABDU",
+    "margin": "VILWANATHAN. A.C.",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Anaikattu": {
+    "candidate": "44",
+    "party": "D.VELAZHAGAN",
+    "margin": "A.P.NANDAKUMAR",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Andipatti": {
+    "candidate": "198",
+    "party": "MAHARAJAN.A",
+    "margin": "LOGIRAJAN.A",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Anna Nagar": {
+    "candidate": "21",
+    "party": "V.K.RAMKUMAR",
+    "margin": "N.CHITRARASU",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Anthiyur": {
+    "candidate": "105",
+    "party": "HARIBASKAR.P",
+    "margin": "SIVABALAN.M",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Arakkonam": {
+    "candidate": "38",
+    "party": "V. GANDHIRAJ",
+    "margin": "EZHIL CAROLINE",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Viduthalai Chiruthaigal Katchi": {
+    "candidate": "iParty Wise State TrendsLeading In:2Won In:0Trailing In:5",
+    "party": "nan",
+    "margin": "nan",
+    "status": "nan"
+  },
+  "Arani": {
+    "candidate": "67",
+    "party": "JAYASUDHA. L",
+    "margin": "VENKATESH KUMAR. D",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Aranthangi": {
+    "candidate": "183",
+    "party": "MOHAMED FARVAS. J",
+    "margin": "RAMACHANDRAN . T",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Aravakurichi": {
+    "candidate": "134",
+    "party": "ELANGO. R",
+    "margin": "KARTHIKEYAN. P",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Arcot": {
+    "candidate": "42",
+    "party": "S.M.SUKUMAR",
+    "margin": "G.VIJAY MOHAN",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Ariyalur": {
+    "candidate": "149",
+    "party": "RAJENDRAN S",
+    "margin": "LATHA BALU",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Aruppukkottai": {
+    "candidate": "207",
+    "party": "KARTHIK KUMAR. K",
+    "margin": "RAMACHANDRAN. K.K.S.S.R",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Athoor": {
+    "candidate": "129",
+    "party": "I. PERIASAMY",
+    "margin": "N. KALAISELVI",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Attur": {
+    "candidate": "82",
+    "party": "JAYASANKARAN. A.P.",
+    "margin": "SELVABHARATHI. R.",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Avadi": {
+    "candidate": "6",
+    "party": "R.RAMESH KUMAR",
+    "margin": "S.M.NASAR",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Avanashi": {
+    "candidate": "112",
+    "party": "KAMALI.S",
+    "margin": "DR. L. MURUGAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Bharatiya Janata Party": {
+    "candidate": "iParty Wise State TrendsLeading In:2Won In:0Trailing In:6",
+    "party": "nan",
+    "margin": "nan",
+    "status": "nan"
+  },
+  "Bargur": {
+    "candidate": "52",
+    "party": "E. MURALIDHARAN",
+    "margin": "E.C. GOVINDARASAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Bhavani": {
+    "candidate": "104",
+    "party": "KARUPPANAN. K.C",
+    "margin": "BALAKRISHNAN",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:44"
+  },
+  "Bhavanisagar": {
+    "candidate": "107",
+    "party": "V.P.TAMILSELVI",
+    "margin": "A.BANNARI",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Bhuvanagiri": {
+    "candidate": "157",
+    "party": "ARUNMOZHITHEVAN . A",
+    "margin": "SARAVANAN. DURAI . K",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:44"
+  },
+  "Bodinayakanur": {
+    "candidate": "200",
+    "party": "PANNEERSELVAM.O",
+    "margin": "PRAKASH.S",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:84"
+  },
+  "Chengalpattu": {
+    "candidate": "32",
+    "party": "S. THIYAGARAJAN",
+    "margin": "KARTHIKDHANDAPANI",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Chengam": {
+    "candidate": "62",
+    "party": "S.VELU",
+    "margin": "K BHARATHIDHASAN",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:44"
+  },
+  "Chepauk": {
+    "candidate": "19",
+    "party": "UDHAYANIDHI STALIN",
+    "margin": "SELVAM. D",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:84"
+  },
+  "Cheyyar": {
+    "candidate": "68",
+    "party": "MUKKUR N. SUBRAMANIAN",
+    "margin": "DUSI K MOHAN",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:44"
+  },
+  "Cheyyur": {
+    "candidate": "34",
+    "party": "RAJASEKAR. E",
+    "margin": "MOHAN RAJA.M.G.K",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:44"
+  },
+  "Chidambaram": {
+    "candidate": "158",
+    "party": "THAMIMUN ANSARI. M",
+    "margin": "PANDIAN. K.A",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:84"
+  },
+  "Coimbatore North": {
+    "candidate": "118",
+    "party": "V. SAMPATHKUMAR",
+    "margin": "DURAI. SENTHAMIL SELVAN B.E",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Coimbatore South": {
+    "candidate": "120",
+    "party": "V SENTHILBALAJI",
+    "margin": "V. SENTHILKUMAR",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:84"
+  },
+  "Colachal": {
+    "candidate": "231",
+    "party": "THARAHAI CUTHBERT",
+    "margin": "PREM ALEX LAWRENCE",
+    "status": "Indian National CongressiParty Wise State TrendsLeading In:4Won In:1Trailing In:9"
+  },
+  "Coonoor": {
+    "candidate": "110",
+    "party": "M. RAJU",
+    "margin": "A. RAMU",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:84"
+  },
+  "Cuddalore": {
+    "candidate": "155",
+    "party": "B.RAJKUMAR",
+    "margin": "A.S.CHANDARASEKARAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Cumbum": {
+    "candidate": "201",
+    "party": "JEGANATHMISHRA PLA",
+    "margin": "ERAMAKRISHNAN N",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Dharapuram": {
+    "candidate": "101",
+    "party": "SATHYABAMA.P",
+    "margin": "INDIRANI.T",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:44"
+  },
+  "Dharmapuri": {
+    "candidate": "59",
+    "party": "SOWMIYA ANBUMANI",
+    "margin": "SIVAN. M.",
+    "status": "Pattali Makkal KatchiiParty Wise State TrendsLeading In:4Won In:0Trailing In:5"
+  },
+  "Pattali Makkal Katchi": {
+    "candidate": "iParty Wise State TrendsLeading In:4Won In:0Trailing In:5",
+    "party": "nan",
+    "margin": "nan",
+    "status": "nan"
+  },
+  "Dindigul": {
+    "candidate": "132",
+    "party": "SENTHILKUMAR. I.P",
+    "margin": "NAZEER RAJA. G",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Dr.Radhakrishnan Nagar": {
+    "candidate": "11",
+    "party": "N. MARIE WILSON",
+    "margin": "J. JOHN EBENEZER",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Edappadi": {
+    "candidate": "86",
+    "party": "EDAPPADI PALANISWAMI. K",
+    "margin": "PREMKUMAR. K",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Independent": {
+    "candidate": "iParty Wise State TrendsLeading In:0Won In:0Trailing In:1",
+    "party": "nan",
+    "margin": "nan",
+    "status": "nan"
+  },
+  "Egmore": {
+    "candidate": "16",
+    "party": "RAJMOHAN",
+    "margin": "TAMILAN PRASANNA",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Erode East": {
+    "candidate": "98",
+    "party": "M.VIJAY BALAJI",
+    "margin": "GOPINATH PALANIYAPPAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Erode West": {
+    "candidate": "99",
+    "party": "ANANTH MOGHAN K.K.",
+    "margin": "S. MUTHUSAMY",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Gandharvakottai": {
+    "candidate": "178",
+    "party": "N. SUBRAMANIAN",
+    "margin": "C. UTHAYAKUMAR",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Gangavalli": {
+    "candidate": "81",
+    "party": "NALLATHAMBI. A",
+    "margin": "CHINNADURAI. K",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Gingee": {
+    "candidate": "70",
+    "party": "GANESHKUMAR A",
+    "margin": "GINGEE MASTHAN K S",
+    "status": "Pattali Makkal KatchiiParty Wise State TrendsLeading In:4Won In:0Trailing In:5"
+  },
+  "Gobichettipalayam": {
+    "candidate": "106",
+    "party": "SENGOTTAIYAN.K.A",
+    "margin": "NALLASIVAM.N",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Gudalur": {
+    "candidate": "109",
+    "party": "DHRAVIDAMANI.M",
+    "margin": "PON.JAYASEELAN",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Gudiyattam": {
+    "candidate": "46",
+    "party": "K.SINDU",
+    "margin": "K.B.PRADAP",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Desiya Murpokku Dravida Kazhagam": {
+    "candidate": "iParty Wise State TrendsLeading In:1Won In:0Trailing In:4",
+    "party": "nan",
+    "margin": "nan",
+    "status": "nan"
+  },
+  "Gummidipoondi": {
+    "candidate": "1",
+    "party": "S.VIJAYAKUMAR",
+    "margin": "SUDHAKAR.V",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Harbour": {
+    "candidate": "18",
+    "party": "P K SEKARBABU",
+    "margin": "SINORA P S ASHOK",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Harur": {
+    "candidate": "61",
+    "party": "SAMPATHKUMAR. V",
+    "margin": "SHANMUGAM. A",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Hosur": {
+    "candidate": "55",
+    "party": "BALAKRISHNAREDDY. P",
+    "margin": "SATHYA.S.A.",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Jayankondam": {
+    "candidate": "150",
+    "party": "VAITHILINGAM G.",
+    "margin": "KANNAN KA.SO.KA.",
+    "status": "Pattali Makkal KatchiiParty Wise State TrendsLeading In:4Won In:0Trailing In:5"
+  },
+  "Jolarpet": {
+    "candidate": "49",
+    "party": "VEERAMANI K.C.",
+    "margin": "MUNISAMY C",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Kadayanallur": {
+    "candidate": "221",
+    "party": "RAJENDRAN. T. M",
+    "margin": "C. KRISHNAMURALI",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Kalasapakkam": {
+    "candidate": "65",
+    "party": "AGRI KRISHNAMURTHY. S S",
+    "margin": "SARAVANAN. P.S.T",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Kallakurichi": {
+    "candidate": "80",
+    "party": "ARUL VIGNESH C",
+    "margin": "MALATHI K",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Kancheepuram": {
+    "candidate": "37",
+    "party": "R.V. RANJITHKUMAR",
+    "margin": "V. SOMASUNDARAM",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Kangayam": {
+    "candidate": "102",
+    "party": "NSN NATARAJ",
+    "margin": "MANI GOUNDER",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:44"
+  },
+  "Kanniyakumari": {
+    "candidate": "229",
+    "party": "THALAVAI SUNDARAM. N",
+    "margin": "MAHESH.R",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:44"
+  },
+  "Karaikudi": {
+    "candidate": "184",
+    "party": "DR.PRABHU. TK",
+    "margin": "MANGUDI. S",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Karur": {
+    "candidate": "135",
+    "party": "M.R. VIJAYABHASKAR",
+    "margin": "AASEE.M. THIAGARAJAN",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:44"
+  },
+  "Katpadi": {
+    "candidate": "40",
+    "party": "V. RAMU",
+    "margin": "DR M SUDHAKAR",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:44"
+  },
+  "Kattumannarkoil": {
+    "candidate": "159",
+    "party": "L.E. JOTHIMANI",
+    "margin": "A. SOZHAN",
+    "status": "Viduthalai Chiruthaigal KatchiiParty Wise State TrendsLeading In:2Won In:0Trailing In:5"
+  },
+  "Kavundampalayam": {
+    "candidate": "117",
+    "party": "KANIMOZHI SANTHOSH",
+    "margin": "ARUNKUMAR PRG",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Killiyoor": {
+    "candidate": "234",
+    "party": "RAJESH KUMAR. S",
+    "margin": "SABIN. S",
+    "status": "Indian National CongressiParty Wise State TrendsLeading In:4Won In:1Trailing In:9"
+  },
+  "Kilpennathur": {
+    "candidate": "64",
+    "party": "RAMACHANDRAN.S",
+    "margin": "PITCHANDI.K",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:44"
+  },
+  "Kilvaithinankuppam": {
+    "candidate": "45",
+    "party": "THENRAL KUMAR. E",
+    "margin": "DR. RAJESWARI. R",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Kilvelur": {
+    "candidate": "164",
+    "party": "SENTHIL PANDIAN. P",
+    "margin": "LATHA. T",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Communist Party Of India (Marxist)": {
+    "candidate": "iParty Wise State TrendsLeading In:1Won In:0Trailing In:2",
+    "party": "nan",
+    "margin": "nan",
+    "status": "nan"
+  },
+  "Kinathukadavu": {
+    "candidate": "122",
+    "party": "VIGNESH K",
+    "margin": "SABARI KARTHIKEYAN K.V.K.S",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Kolathur": {
+    "candidate": "13",
+    "party": "V. S. BABU",
+    "margin": "M. K. STALIN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Kovilpatti": {
+    "candidate": "218",
+    "party": "KARUNANITHI.K",
+    "margin": "BALASUBRAMANIAN.S",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:84"
+  },
+  "Krishnagiri": {
+    "candidate": "53",
+    "party": "MUKUNDHAN.P",
+    "margin": "ASHOKKUMAR.K",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Krishnarayapuram": {
+    "candidate": "136",
+    "party": "SATHYA. M",
+    "margin": "DR. DHIVYA. S",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Kulithalai": {
+    "candidate": "137",
+    "party": "G.BALASUBRAMANI",
+    "margin": "SURIYANUR. A. CHANDRAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Kumarapalayam": {
+    "candidate": "97",
+    "party": "C.VIJAYALAKSHMI",
+    "margin": "P.THANGAMANI",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Kumbakonam": {
+    "candidate": "171",
+    "party": "ANBALAGAN G",
+    "margin": "VINOTH",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Kunnam": {
+    "candidate": "148",
+    "party": "SIVASANKAR. S.S",
+    "margin": "SARANYA. A",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Kurinjipadi": {
+    "candidate": "156",
+    "party": "M.R.K.PANNEERSELVAM",
+    "margin": "A BHUVANENTHIRAN",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Lalgudi": {
+    "candidate": "143",
+    "party": "LEEMAROSE MARTIN",
+    "margin": "KU PA KRISHNAN",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Madathukulam": {
+    "candidate": "126",
+    "party": "R JAYARAMAKRISHNAN",
+    "margin": "C SHANMUGAVELU",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Amma Makkal Munnettra Kazagam": {
+    "candidate": "iParty Wise State TrendsLeading In:1Won In:0Trailing In:1",
+    "party": "nan",
+    "margin": "nan",
+    "status": "nan"
+  },
+  "Madavaram": {
+    "candidate": "9",
+    "party": "M.L.VIJAYPRABHU",
+    "margin": "S.SUDHARSANAM",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Madurai Central": {
+    "candidate": "193",
+    "party": "MADHAR BADHURUDEEN",
+    "margin": "PALANIVEL THIAGA RAJAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Madurai East": {
+    "candidate": "189",
+    "party": "KARTHIKEYAN S",
+    "margin": "MOORTHY P",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Madurai North": {
+    "candidate": "191",
+    "party": "A.KALLANAI",
+    "margin": "G.THALAPATHI",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Madurai South": {
+    "candidate": "192",
+    "party": "M.M.GOPISON",
+    "margin": "M.BOOMINATHAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Madurai West": {
+    "candidate": "194",
+    "party": "THANGAPANDI SR",
+    "margin": "BALAJI R",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Madurantakam": {
+    "candidate": "35",
+    "party": "MARAGATHAM KUMARAVEL.K",
+    "margin": "EZHIL KATHARINE EZHILMALAI",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Maduravoyal": {
+    "candidate": "7",
+    "party": "RHEVANTH CHARAN",
+    "margin": "GANAPATHY. K",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Mailam": {
+    "candidate": "71",
+    "party": "SHANMUGAM C VE",
+    "margin": "VIJAY NIRANJAN A",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Manachanallur": {
+    "candidate": "144",
+    "party": "KATHIRAVAN. S",
+    "margin": "V.SARAVANAN",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Manamadurai": {
+    "candidate": "187",
+    "party": "ELANGOVAN.D",
+    "margin": "TAMILARASI.A",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Manapparai": {
+    "candidate": "138",
+    "party": "R. KATHIRAVAN",
+    "margin": "DR. PL. VIJAYAKUMAR",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Mannargudi": {
+    "candidate": "167",
+    "party": "KAMARAJ. S",
+    "margin": "RAJAA.T.R.B",
+    "status": "Amma Makkal Munnettra KazagamiParty Wise State TrendsLeading In:1Won In:0Trailing In:1"
+  },
+  "Mayiladuthurai": {
+    "candidate": "161",
+    "party": "JAMAL MOHAMED YOUNOOS. Y.N",
+    "margin": "PALANISAMY. A M.COM.",
+    "status": "Indian National CongressiParty Wise State TrendsLeading In:4Won In:1Trailing In:9"
+  },
+  "Melur": {
+    "candidate": "188",
+    "party": "P.VISWANATHAN",
+    "margin": "A.MADURAIVEERAN",
+    "status": "Indian National CongressiParty Wise State TrendsLeading In:4Won In:1Trailing In:9"
+  },
+  "Mettuppalayam": {
+    "candidate": "111",
+    "party": "SUNILANAND",
+    "margin": "SMT.KAVITHA KALYANASUNDARAM",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Mettur": {
+    "candidate": "85",
+    "party": "VENKATACHALAM. G",
+    "margin": "MIDHUN CHAKRAVARTHY. M",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Modakkurichi": {
+    "candidate": "100",
+    "party": "D.SHANMUGAN",
+    "margin": "S.KIRTHIKA",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Mudhukulathur": {
+    "candidate": "212",
+    "party": "R.S.RAJAKANNAPPAN",
+    "margin": "MALARVIZHI. B",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Musiri": {
+    "candidate": "145",
+    "party": "M.VIGNESH",
+    "margin": "N.S.KARUNAIRAAJA",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Mylapore": {
+    "candidate": "25",
+    "party": "VENKATARAMANAN. P",
+    "margin": "VELU. DHA",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Nagapattinam": {
+    "candidate": "163",
+    "party": "M.H.JAWAHIRULLAH",
+    "margin": "THANKA.KATHIRAVAN",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Nagercoil": {
+    "candidate": "230",
+    "party": "AUSTIN",
+    "margin": "BERVIN KINGS G",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Namakkal": {
+    "candidate": "94",
+    "party": "DILIP C S",
+    "margin": "SRIDEVI MOHAN P S",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Nanguneri": {
+    "candidate": "227",
+    "party": "REDDIARPATTI V. NARAYANAN",
+    "margin": "RUBY.R.MANOHARAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Nannilam": {
+    "candidate": "169",
+    "party": "KAMARAJ. R",
+    "margin": "MOHAMED MUBARAK",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Natham": {
+    "candidate": "131",
+    "party": "NATHAM VISWANATHAN R",
+    "margin": "SELVAKUMAR K",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Neyveli": {
+    "candidate": "153",
+    "party": "RAJENDRAN.R",
+    "margin": "SABA.RAJENDRAN",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Nilakkottai": {
+    "candidate": "130",
+    "party": "NAGAJOTHI.S",
+    "margin": "AYYANAR.R",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Oddanchatram": {
+    "candidate": "128",
+    "party": "SAKKARAPANI. R",
+    "margin": "VIDIYAL S. SEKAR",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Omalur": {
+    "candidate": "84",
+    "party": "MANI. R",
+    "margin": "ADHIYAMAAN. R.V",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Orathanadu": {
+    "candidate": "175",
+    "party": "R. VAITHILINGAM",
+    "margin": "DR. K. ARVIND",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Ottapidaram": {
+    "candidate": "217",
+    "party": "P .MATHANRAJA",
+    "margin": "P.M.RAMAJEYAM",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Padmanabhapuram": {
+    "candidate": "232",
+    "party": "CHELLASWAMY. R",
+    "margin": "KRISHNA KUMAR. S",
+    "status": "Communist Party of India (Marxist)iParty Wise State TrendsLeading In:1Won In:0Trailing In:2"
+  },
+  "Palacodu": {
+    "candidate": "57",
+    "party": "ANBALAGAN. K.P.",
+    "margin": "GOPI. R.",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Palani": {
+    "candidate": "127",
+    "party": "RAVIMANOHARAN. K",
+    "margin": "DR. PRAVEEN KUMAR. M",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Palayamkottai": {
+    "candidate": "226",
+    "party": "M.ABDUL WAHAB",
+    "margin": "MARIA JOHN",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Palladam": {
+    "candidate": "115",
+    "party": "K.RAMKUMAR",
+    "margin": "K.P.PARAMASIVAM",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Pallavaram": {
+    "candidate": "30",
+    "party": "J.KAMATCHI",
+    "margin": "D.MURUGESAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Panruti": {
+    "candidate": "154",
+    "party": "MOHAN. K",
+    "margin": "ABDUR RAHMAN. A.R",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Papanasam": {
+    "candidate": "172",
+    "party": "A.M. SHAHJAHAN",
+    "margin": "AZARUDEEN UDUMAN ALI",
+    "status": "Indian Union Muslim LeagueiParty Wise State TrendsLeading In:2Won In:0Trailing In:0"
+  },
+  "Indian Union Muslim League": {
+    "candidate": "iParty Wise State TrendsLeading In:2Won In:0Trailing In:0",
+    "party": "nan",
+    "margin": "nan",
+    "status": "nan"
+  },
+  "Pappireddipatti": {
+    "candidate": "60",
+    "party": "MARAGATHAM VETRIVEL",
+    "margin": "PALANIAPPAN. P",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Paramakudi": {
+    "candidate": "209",
+    "party": "ADVOCATE. KATHIRAVAN. K.K",
+    "margin": "GOPIRAJAN. G",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Paramathi-Velur": {
+    "candidate": "95",
+    "party": "MOORTHIY K S",
+    "margin": "SEKAR S",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Pattukkottai": {
+    "candidate": "176",
+    "party": "ANNADURAI K",
+    "margin": "MATHAN C",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Pennagaram": {
+    "candidate": "58",
+    "party": "SELVAM. V.",
+    "margin": "GAJENDRAN. S.",
+    "status": "Pattali Makkal KatchiiParty Wise State TrendsLeading In:4Won In:0Trailing In:5"
+  },
+  "Perambalur": {
+    "candidate": "147",
+    "party": "SIVAKUMAR. K",
+    "margin": "DR. JAYALAKSHMI. S.T",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Perambur": {
+    "candidate": "12",
+    "party": "C. JOSEPH VIJAY",
+    "margin": "R.D. SHEKAR",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Peravurani": {
+    "candidate": "177",
+    "party": "GOVI.ELANGO",
+    "margin": "ASHOKKUMAR. N",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Periyakulam": {
+    "candidate": "199",
+    "party": "SABARI IYNGARAN G.",
+    "margin": "SAKTHIVEL P.",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Perundurai": {
+    "candidate": "103",
+    "party": "JAYAKUMAR. S",
+    "margin": "THOPPU VENKATACHALAM (ALIAS) N.D. VENKATACHALAM",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Pollachi": {
+    "candidate": "123",
+    "party": "K. NITHYANANDHAN",
+    "margin": "POLLACHI V. JAYARAMAN",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Polur": {
+    "candidate": "66",
+    "party": "ABISHEK. R",
+    "margin": "SARAVANAN. P",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Ponneri": {
+    "candidate": "2",
+    "party": "DR.RAVI.M.S",
+    "margin": "DURAI CHANDRASEKAR",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Poompuhar": {
+    "candidate": "162",
+    "party": "NIVEDHA M MURUGAN",
+    "margin": "PAVUNRAJ. S",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Poonamallee": {
+    "candidate": "5",
+    "party": "PRAKASAM.R",
+    "margin": "KRISHNASWAMY.A",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Pudukkottai": {
+    "candidate": "180",
+    "party": "V. MUTHURAJA",
+    "margin": "K.M. SHARIFF",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Radhapuram": {
+    "candidate": "228",
+    "party": "DR.SATHISH CHRISTOPHER",
+    "margin": "APPAVU.M",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Rajapalayam": {
+    "candidate": "202",
+    "party": "JEGADESHWARI. K",
+    "margin": "THANGAPANDIAN. S",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Ramanathapuram": {
+    "candidate": "211",
+    "party": "KATHARBATCHA MUTHURAMALINGAM",
+    "margin": "SHAHUL HAMEED",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Ranipet": {
+    "candidate": "41",
+    "party": "R. GANDHI",
+    "margin": "THAHIRA",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Rasipuram": {
+    "candidate": "92",
+    "party": "LOGESH TAMILSELVAN D",
+    "margin": "MATHIVENTHAN M DR",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Rishivandiyam": {
+    "candidate": "78",
+    "party": "KARTHIKEYAN K",
+    "margin": "ASHOK KUMAR G",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Royapuram": {
+    "candidate": "17",
+    "party": "K.V. VIJAY DAMU",
+    "margin": "DR. A. SUBAIR KHAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Saidapet": {
+    "candidate": "23",
+    "party": "ARUL PRAKASAM. M",
+    "margin": "SUBRAMANIAN. MA",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Salem North": {
+    "candidate": "89",
+    "party": "SIVAKUMAR. K",
+    "margin": "RAJENDRAN. R",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Salem South": {
+    "candidate": "90",
+    "party": "VIJAY TAMILAN PARTHIBAN. A",
+    "margin": "LOGANATHAN. M",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Salem West": {
+    "candidate": "88",
+    "party": "LAKSHMANAN.S",
+    "margin": "KARTHE.M",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Sankarankovil": {
+    "candidate": "219",
+    "party": "DR. DHILIPAN JAISHANKAR",
+    "margin": "C. RAMARAJAN",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Sankarapuram": {
+    "candidate": "79",
+    "party": "UDHAYASURIYAN T",
+    "margin": "RAKESH R",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Sankari": {
+    "candidate": "87",
+    "party": "VETRIVEL. S",
+    "margin": "SENTHILKUMAR. K",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Sattur": {
+    "candidate": "204",
+    "party": "NAINAR NAGENTHRAN",
+    "margin": "KADARKARAIRAJ. A",
+    "status": "Bharatiya Janata PartyiParty Wise State TrendsLeading In:2Won In:0Trailing In:6"
+  },
+  "Senthamangalam": {
+    "candidate": "93",
+    "party": "C CHANDRASEKARAN",
+    "margin": "P CHANDRASEKAR",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Sholavandan": {
+    "candidate": "190",
+    "party": "KARUPPAIAH.M.V",
+    "margin": "VENKATESAN.A",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Sholingur": {
+    "candidate": "39",
+    "party": "G.KAPIL",
+    "margin": "K.SARAVANAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Shozhinganallur": {
+    "candidate": "27",
+    "party": "ECR P SARAVANAN",
+    "margin": "S. ARAVIND RAMESH",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Singanallur": {
+    "candidate": "121",
+    "party": "K.S.SRI GIRI PRASATH",
+    "margin": "K.R.JAYARAM",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Sirkazhi": {
+    "candidate": "160",
+    "party": "SENTHILSELVAN.R",
+    "margin": "GOPINATH.S",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Sivaganga": {
+    "candidate": "186",
+    "party": "KULANTHAI RANI A",
+    "margin": "SENTHILNATHAN PR",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Sivakasi": {
+    "candidate": "205",
+    "party": "KEERTHANA S",
+    "margin": "RAJENTHRABHALAJI K T",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Sriperumbudur": {
+    "candidate": "29",
+    "party": "THENNARASU.K",
+    "margin": "K. SELVAPERUNTHAGAI",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Srirangam": {
+    "candidate": "139",
+    "party": "RAMESH",
+    "margin": "R.MANOHARAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Srivaikuntam": {
+    "candidate": "216",
+    "party": "SHANMUGANATHAN. S. P",
+    "margin": "SARAVANAN. G",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Srivilliputhur": {
+    "candidate": "203",
+    "party": "MAHALINGAM.P",
+    "margin": "KARTHIK.A",
+    "status": "Communist Party of IndiaiParty Wise State TrendsLeading In:3Won In:0Trailing In:0"
+  },
+  "Communist Party Of India": {
+    "candidate": "iParty Wise State TrendsLeading In:3Won In:0Trailing In:0",
+    "party": "nan",
+    "margin": "nan",
+    "status": "nan"
+  },
+  "Sulur": {
+    "candidate": "116",
+    "party": "NM.SUKUMAR",
+    "margin": "THALAPATHY MURUGESAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Tambaram": {
+    "candidate": "31",
+    "party": "D.SARATHKUMAR",
+    "margin": "R.S.KIRUTHIKA DEVI",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Tenkasi": {
+    "candidate": "222",
+    "party": "DR.KALAI KATHIRAVAN",
+    "margin": "S.SELVA MOHANDAS PANDIAN",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Thalli": {
+    "candidate": "56",
+    "party": "RAMACHANDRAN. T",
+    "margin": "DR.NAGESH KUMAR. C",
+    "status": "Communist Party of IndiaiParty Wise State TrendsLeading In:3Won In:0Trailing In:0"
+  },
+  "Thanjavur": {
+    "candidate": "174",
+    "party": "R. VIJAYSARAVANAN",
+    "margin": "SHAN. RAMANATHAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Thiru-Vi-Ka-Nagar": {
+    "candidate": "15",
+    "party": "M. R. PALLAVI",
+    "margin": "K. S. RAVICHANDRAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Thirumangalam": {
+    "candidate": "196",
+    "party": "MANIMARAN.M",
+    "margin": "UDHAYAKUMAR.R.B",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Thirumayam": {
+    "candidate": "181",
+    "party": "REGUPATHY.S",
+    "margin": "VAIRAMUTHU.PK",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Thiruparankundram": {
+    "candidate": "195",
+    "party": "NIRMALKUMAR. R.",
+    "margin": "KIRUTHIGA THANGAPANDI",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Thiruporur": {
+    "candidate": "33",
+    "party": "B.VIJAYARAJ",
+    "margin": "R. PANNEERDOSS",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Thiruthuraipoondi": {
+    "candidate": "166",
+    "party": "MARIMUTHU.K",
+    "margin": "PANDIYAN.S",
+    "status": "Communist Party of IndiaiParty Wise State TrendsLeading In:3Won In:0Trailing In:0"
+  },
+  "Thiruvaiyaru": {
+    "candidate": "173",
+    "party": "DURAI. CHANDRASEKARAN",
+    "margin": "MATHI. MANIKANDAN",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Thiruvallur": {
+    "candidate": "4",
+    "party": "DR. T. ARUNKUMAR",
+    "margin": "V.G. RAAJENDRAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Thiruvarur": {
+    "candidate": "168",
+    "party": "KALAIVANAN POONDI K",
+    "margin": "VEERAMANI V",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Thiruverumbur": {
+    "candidate": "142",
+    "party": "VIJAYAKUMAR (A) NAVALPATTU S. VIJI",
+    "margin": "ANBIL MAHESH POYYAMOZHI",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Thiruvidaimarudur": {
+    "candidate": "170",
+    "party": "GOVI.CHEZHIAAN",
+    "margin": "S.PRABAKARAN",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Thiruvottiyur": {
+    "candidate": "10",
+    "party": "SENTHIL KUMAR. N",
+    "margin": "SUNDARARAJ. L",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "T. Nagar": {
+    "candidate": "24",
+    "party": "ANAND N",
+    "margin": "RAJA ANBAZHAGAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Thondamuthur": {
+    "candidate": "119",
+    "party": "S.P.VELUMANI",
+    "margin": "N.R.KARTHIKEYAN",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Thoothukkudi": {
+    "candidate": "214",
+    "party": "SRINATH",
+    "margin": "P. GEETHA JEEVAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Thousand Lights": {
+    "candidate": "20",
+    "party": "PRABHAKAR.J.C.D",
+    "margin": "EZHILAN NAGANATHAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Thuraiyur": {
+    "candidate": "146",
+    "party": "RAVISANKAR.M",
+    "margin": "E.SAROJA",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Tindivanam": {
+    "candidate": "72",
+    "party": "VANNI ARASU",
+    "margin": "ARJUNAN. P",
+    "status": "Viduthalai Chiruthaigal KatchiiParty Wise State TrendsLeading In:2Won In:0Trailing In:5"
+  },
+  "Tiruchendur": {
+    "candidate": "215",
+    "party": "ANITHA R. RADHAKRISHNAN",
+    "margin": "J. MURUGAN",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Tiruchengodu": {
+    "candidate": "96",
+    "party": "ARUNRAJ K G",
+    "margin": "SRMT SEKAR (A) CHANDRASEKAR R",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Tiruchirappalli (East)": {
+    "candidate": "141",
+    "party": "C. JOSEPH VIJAY",
+    "margin": "S. INIGO IRUDAYARAJ",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Tiruchirappalli (West)": {
+    "candidate": "140",
+    "party": "K.N.NEHRU",
+    "margin": "G.RAMAMOORTHI",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Tiruchuli": {
+    "candidate": "208",
+    "party": "THANGAM THENARASU",
+    "margin": "SAMAYAN.S",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Tirukkoyilur": {
+    "candidate": "76",
+    "party": "VIJAY R BARANIBALAAJI",
+    "margin": "PALANISAMY S",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Tirunelveli": {
+    "candidate": "224",
+    "party": "MURUGHAN.R.S.",
+    "margin": "SUBRAMANIAN.S",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Tiruppattur": {
+    "candidate": "185",
+    "party": "PERIAKARUPPAN. KR",
+    "margin": "SEENIVASA SETHUPATHY. R",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Tiruppur (North)": {
+    "candidate": "113",
+    "party": "V.SATHYABAMA",
+    "margin": "M.S.M.ANANDAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Tiruppur (South)": {
+    "candidate": "114",
+    "party": "BALAMURUGAN. S",
+    "margin": "DINESHKUMAR. N",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Tiruttani": {
+    "candidate": "3",
+    "party": "G.HARI",
+    "margin": "M.SATHYA KUMAR",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Tiruvadanai": {
+    "candidate": "210",
+    "party": "RAJEEV",
+    "margin": "RM. KARUMANICKAM",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Tiruvannamalai": {
+    "candidate": "63",
+    "party": "VELU. E.V",
+    "margin": "ARUL ARUMUGAM",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Tittakudi": {
+    "candidate": "151",
+    "party": "GANESAN C.V",
+    "margin": "RAJASEKAR A",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Udhagamandalam": {
+    "candidate": "108",
+    "party": "BHOJARAJAN.M",
+    "margin": "IBRAHIM.R",
+    "status": "Bharatiya Janata PartyiParty Wise State TrendsLeading In:2Won In:0Trailing In:6"
+  },
+  "Udumalaipettai": {
+    "candidate": "125",
+    "party": "RADHAKRISHNAN K.",
+    "margin": "JAYAKUMAR M.",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Ulundurpettai": {
+    "candidate": "77",
+    "party": "VASANTHAVEL G R",
+    "margin": "KUMARAGURU R",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Usilampatti": {
+    "candidate": "197",
+    "party": "VIJAY. M",
+    "margin": "MAHENDRAN. I",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Uthangarai": {
+    "candidate": "51",
+    "party": "N ELAIYARAJA",
+    "margin": "T M TAMILSELVAM",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Uthiramerur": {
+    "candidate": "36",
+    "party": "MUNIRATHINAM.J",
+    "margin": "SUNDAR.K",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:105Won In:2Trailing In:67"
+  },
+  "Valparai": {
+    "candidate": "124",
+    "party": "KUTTY (ALIAS) SUDHAKAR. A",
+    "margin": "DR. SRIDHARAN. A",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Vandavasi": {
+    "candidate": "69",
+    "party": "AMBETHKUMAR. S",
+    "margin": "RANI. P",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Vaniyambadi": {
+    "candidate": "47",
+    "party": "SYED FAROOQ BASHA SSB",
+    "margin": "SYED BHURHANUDEEN",
+    "status": "Indian Union Muslim LeagueiParty Wise State TrendsLeading In:2Won In:0Trailing In:0"
+  },
+  "Vanur": {
+    "candidate": "73",
+    "party": "GOWTHAM D",
+    "margin": "SURESH P",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Vasudevanallur": {
+    "candidate": "220",
+    "party": "E. RAJA",
+    "margin": "ANANTHAN AYYASAMY",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Vedaranyam": {
+    "candidate": "165",
+    "party": "MANIAN. O.S",
+    "margin": "PUGAZHENDI. M",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:45"
+  },
+  "Vedasandur": {
+    "candidate": "133",
+    "party": "SAMINATHAN. T",
+    "margin": "PARAMASIVAM. V.P.B.",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:83"
+  },
+  "Veerapandi": {
+    "candidate": "91",
+    "party": "PALANIVEL. M.S",
+    "margin": "SRI BALAJI SUGUMAR. S",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Velachery": {
+    "candidate": "26",
+    "party": "KUMAR. R",
+    "margin": "ASHOK. M.K",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Vellore": {
+    "candidate": "43",
+    "party": "M.M.VINOTH KANNAN",
+    "margin": "P.KARTHIKEYAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Veppanahalli": {
+    "candidate": "54",
+    "party": "SRINIVASAN.P.S",
+    "margin": "MUNUSAMY.K.P",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:84"
+  },
+  "Vikravandi": {
+    "candidate": "75",
+    "party": "VIJAI VADIVEL A",
+    "margin": "SIVAKUMAR C",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Vilathikulam": {
+    "candidate": "213",
+    "party": "MARKANDAYAN G V",
+    "margin": "R. SATHYA",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:84"
+  },
+  "Vilavancode": {
+    "candidate": "233",
+    "party": "PRAVEEN T.T",
+    "margin": "MICHAEL KUMAR K",
+    "status": "Indian National CongressiParty Wise State TrendsLeading In:4Won In:1Trailing In:9"
+  },
+  "Villivakkam": {
+    "candidate": "14",
+    "party": "AADHAV ARJUNA",
+    "margin": "KARTHIK MOHAN",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Viluppuram": {
+    "candidate": "74",
+    "party": "LAKSHMANAN R",
+    "margin": "MOHANRAJ N",
+    "status": "Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:56Won In:3Trailing In:84"
+  },
+  "Viralimalai": {
+    "candidate": "179",
+    "party": "VIJAYABASKAR. C",
+    "margin": "MURUGESAN. P",
+    "status": "All India Anna Dravida Munnetra KazhagamiParty Wise State TrendsLeading In:47Won In:0Trailing In:44"
+  },
+  "Virudhunagar": {
+    "candidate": "206",
+    "party": "SELVAM P",
+    "margin": "VIJAYAPRABHAKAR",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Virugampakkam": {
+    "candidate": "22",
+    "party": "SABARINATHAN.R",
+    "margin": "PRABHAKARA RAJA.A.M.V",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  },
+  "Vriddhachalam": {
+    "candidate": "152",
+    "party": "PREMALLATHA VIJAYAKANT",
+    "margin": "VIJAY.S",
+    "status": "Desiya Murpokku Dravida KazhagamiParty Wise State TrendsLeading In:1Won In:0Trailing In:4"
+  },
+  "Yercaud": {
+    "candidate": "83",
+    "party": "LAKSHMI JANARTHANAN. J",
+    "margin": "USHARANI. P",
+    "status": "Tamilaga Vettri KazhagamiParty Wise State TrendsLeading In:106Won In:1Trailing In:68"
+  }
 }
