@@ -48,33 +48,35 @@ def get_eci_data():
                 if pd.isna(row[0]) or "Constituency" in str(row[0]): 
                     continue
                 
-                # 1. Get the Constituency Name (Column 0)
-                raw_ac = str(row[0]).strip().title()
+                # 1. Clean the Constituency Name (Removes (SC)/(ST) tags which break matching)
+                raw_ac = str(row[0]).replace("(SC)", "").replace("(ST)", "").strip().title()
                 ac_name = NAME_MAPPING.get(raw_ac, raw_ac)
                 
                 try:
                     # 2. Extract the correct shifted columns
-                    raw_candidate = str(row[2]).strip()   # Col 2 is Leading Candidate
-                    raw_party = str(row[3]).strip().upper() # Col 3 is Party
-                    raw_margin = str(row[6]).strip()      # Col 6 is Margin
-                    raw_status = str(row[7]).strip()      # Col 7 is Status
+                    raw_candidate = str(row[2]).strip()   
+                    raw_party = str(row[3]).strip() 
+                    raw_margin = str(row[6]).strip()      
+                    raw_status = str(row[7]).strip()      
                     
-                    # 3. Clean the Party Name so the Map Colors work
-                    if "VETTRI" in raw_party or "TVK" in raw_party:
+                    # 3. Group Alliances so the Map Colors Work (DMK+, AIADMK+, etc.)
+                    party_check = raw_party.upper()
+                    
+                    if "VETTRI" in party_check or "TVK" in party_check:
                         clean_party = "TVK"
-                    elif "ALL INDIA ANNA" in raw_party or "AIADMK" in raw_party:
-                        clean_party = "AIADMK"
-                    elif "DRAVIDA MUNNETRA" in raw_party or "DMK" in raw_party:
-                        clean_party = "DMK"
-                    elif "BHARATIYA JANATA" in raw_party or "BJP" in raw_party:
-                        clean_party = "BJP"
-                    elif "INDIAN NATIONAL CONGRESS" in raw_party or "INC" in raw_party:
-                        clean_party = "INC"
+                    elif "ANNA" in party_check or "AIADMK" in party_check or "DMDK" in party_check or "SDPI" in party_check or "PUTHIYA" in party_check:
+                        clean_party = "AIADMK" # Colors map Green
+                    elif "DRAVIDA" in party_check or "DMK" in party_check or "CONGRESS" in party_check or "INC" in party_check or "VCK" in party_check or "CPI" in party_check or "COMMUNIST" in party_check or "MDMK" in party_check:
+                        clean_party = "DMK" # Colors map Red
+                    elif "NAAM" in party_check or "NTK" in party_check:
+                        clean_party = "NTK" # Colors map Dark Red
+                    elif "JANATA" in party_check or "BJP" in party_check or "PMK" in party_check or "PATTALI" in party_check or "AMMK" in party_check:
+                        clean_party = "BJP" # Colors map Orange
                     else:
-                        clean_party = raw_party.split('PARTY')[0].strip()[:10] # Fallback
+                        clean_party = "OTH" # Defaults to Gray
                         
                     all_results[ac_name] = {
-                        "candidate": raw_candidate.title(), # Title casing makes names look cleaner
+                        "candidate": raw_candidate.title(), 
                         "party": clean_party,
                         "margin": f"+{raw_margin}", 
                         "status": raw_status
@@ -93,7 +95,7 @@ def get_eci_data():
             break
             
     return all_results
-    
+
 def main():
     print(f"Fetching LIVE 2026 Counting Data from {BASE_URL}...")
     results = get_eci_data()
