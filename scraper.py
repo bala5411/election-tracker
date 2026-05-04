@@ -2,6 +2,7 @@ import pandas as pd
 import requests
 import json
 import os
+import io
 
 # Official ECI 2026 Tamil Nadu State Code is S22
 BASE_URL = "https://results.eci.gov.in/ResultAcGenMay2026/statewiseS22"
@@ -24,7 +25,7 @@ def get_eci_data():
             # We use headers to mimic a browser to avoid getting blocked
             headers = {'User-Agent': 'Mozilla/5.0'}
             response = requests.get(url, headers=headers)
-            tables = pd.read_html(response.text)
+            tables = pd.read_html(io.StringIO(response.text))
             
             # The result table is usually the first or second table on the page
             df = tables[0] 
