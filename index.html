@@ -47,113 +47,119 @@
             </div>
         </div>
     </main>
+   <script>
+    let map, geoLayer, resultsData, districtData;
 
-    <script>
-        let map, geoLayer, resultsData, districtData;
-
-        async function init() {
-            try {
-                // 1. Fetch all local data files from your 'data' folder
-                const [res1, res2, res3] = await Promise.all([
-                    fetch('data/map_data.json').then(r => r.json()),
-                    fetch('data/tn_districts.json').then(r => r.json()),
-                    fetch('data/tn_assembly.json').then(r => r.json()) // Now using your local file
-                ]);
-                
-                resultsData = res1;
-                districtData = res2;
-                const geoJson = res3;
-
-                // 2. Initialize Map
-                map = L.map('map', { zoomControl: false }).setView([11.1271, 78.6569], 7);
-                L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png').addTo(map);
-
-                // 3. Render Tabs
-                const tabContainer = document.getElementById('tab-container');
-                Object.keys(districtData).forEach((dist, index) => {
-                    const btn = document.createElement('button');
-                    btn.className = `px-6 py-2 rounded-full text-xs font-bold whitespace-nowrap border border-slate-800 hover:bg-slate-800 transition ${index === 0 ? 'bg-yellow-500 text-black' : 'bg-slate-900 text-white'}`;
-                    btn.innerText = dist;
-                    btn.onclick = () => switchDistrict(dist, geoJson, btn);
-                    tabContainer.appendChild(btn);
-                });
-
-                // 4. Initial view (Default to Chennai)
-                switchDistrict("Chennai", geoJson, tabContainer.firstElementChild);
-
-            } catch (error) {
-                // If anything fails, show it on the screen!
-                const banner = document.getElementById('error-banner');
-                banner.classList.remove('hidden');
-                banner.innerText = "Error loading data files: " + error.message + " | Please make sure map_data.json, tn_districts.json, and tn_assembly.json are inside the 'data' folder.";
-                console.error(error);
-            }
-        }
-
-        function switchDistrict(distName, fullGeo, btn) {
-            // UI Update
-            document.querySelectorAll('#tab-container button').forEach(b => b.className = b.className.replace('bg-yellow-500 text-black', 'bg-slate-900 text-white'));
-            btn.className = btn.className.replace('bg-slate-900 text-white', 'bg-yellow-500 text-black');
-
-            if (geoLayer) map.removeLayer(geoLayer);
-
-            // Filter boundaries for the selected district
-            const filtered = {
-                type: "FeatureCollection",
-                features: fullGeo.features.filter(f => {
-                    // Check both lowercase and uppercase variations just in case!
-                    const acName = f.properties.ac_name || f.properties.AC_NAME;
-                    return districtData[distName].includes(acName);
-                })
-            };
-
-            geoLayer = L.geoJson(filtered, {
-                style: (f) => {
-                    const acName = f.properties.ac_name || f.properties.AC_NAME;
-                    return {
-                        fillColor: getCol(resultsData[acName]?.party),
-                        weight: 1, opacity: 1, color: '#0f172a', fillOpacity: 0.7
-                    };
-                },
-                onEachFeature: (f, l) => {
-                    l.on('mouseover', () => {
-                        const acName = f.properties.ac_name || f.properties.AC_NAME;
-                        updateSidebar(acName);
-                        l.setStyle({ fillOpacity: 0.9, weight: 2, color: '#ffffff' });
-                    });
-                    l.on('mouseout', () => {
-                        l.setStyle({ fillOpacity: 0.7, weight: 1, color: '#0f172a' });
-                    });
-                }
-            }).addTo(map);
+    async function init() {
+        try {
+            // THE CACHE BUSTER: '?v=' + Date.now() forces GitHub to give you the newest file instantly!
+            const cacheBuster = '?v=' + Date.now();
             
-            // Zoom to fit the district
-            map.fitBounds(geoLayer.getBounds());
+            const [res1, res2, res3] = await Promise.all([
+                fetch('data/map_data.json' + cacheBuster).then(r => r.json()),
+                fetch('data/tn_districts.json' + cacheBuster).then(r => r.json()),
+                fetch('data/tn_assembly.json' + cacheBuster).then(r => r.json()) 
+            ]);
+            
+            // Normalize the resultsData keys (removes hidden spaces and fixes case sensitivity)
+            resultsData = {};
+            for (let key in res1) {
+                resultsData[key.trim().toLowerCase()] = res1[key];
+            }
+            
+            districtData = res2;
+            const geoJson = res3;
+
+            // Initialize Map
+            map = L.map('map', { zoomControl: false }).setView([11.1271, 78.6569], 7);
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png').addTo(map);
+
+            // Render Tabs
+            const tabContainer = document.getElementById('tab-container');
+            Object.keys(districtData).forEach((dist, index) => {
+                const btn = document.createElement('button');
+                btn.className = `px-6 py-2 rounded-full text-xs font-bold whitespace-nowrap border border-slate-800 hover:bg-slate-800 transition ${index === 0 ? 'bg-yellow-500 text-black' : 'bg-slate-900 text-white'}`;
+                btn.innerText = dist;
+                btn.onclick = () => switchDistrict(dist, geoJson, btn);
+                tabContainer.appendChild(btn);
+            });
+
+            // Initial view
+            switchDistrict("Thiruvallur", geoJson, tabContainer.children[1]); // Let's default to Thiruvallur to test!
+
+        } catch (error) {
+            const banner = document.getElementById('error-banner');
+            banner.classList.remove('hidden');
+            banner.innerText = "Data Error: " + error.message;
         }
+    }
 
-        function getCol(p) {
-            return p === 'TVK' ? '#eab308' : p === 'AIADMK' ? '#16a34a' : p === 'DMK' ? '#ef4444' : '#334155';
-        }
+    function switchDistrict(distName, fullGeo, btn) {
+        document.querySelectorAll('#tab-container button').forEach(b => b.className = b.className.replace('bg-yellow-500 text-black', 'bg-slate-900 text-white'));
+        btn.className = btn.className.replace('bg-slate-900 text-white', 'bg-yellow-500 text-black');
 
-        function updateSidebar(ac) {
-            const d = resultsData[ac] || { candidate: 'Pending', party: 'N/A', margin: '0', status: 'Counting' };
-            document.getElementById('side-ac').innerText = ac;
-            document.getElementById('side-cand').innerText = d.candidate;
-            document.getElementById('side-party').innerText = d.party;
-            document.getElementById('side-margin').innerText = d.margin;
-            document.getElementById('side-margin').className = `text-3xl font-black ${d.margin.includes('-') ? 'text-red-500' : 'text-green-500'}`;
-            document.getElementById('side-status').innerText = d.status;
-        }
+        if (geoLayer) map.removeLayer(geoLayer);
 
-        // Timer Logic
-        let sec = 60;
-        setInterval(() => {
-            sec--;
-            document.getElementById('timer').innerText = sec;
-            if (sec <= 0) { location.reload(); }
-        }, 1000);
+        // Normalize target names for reliable matching
+        const targetConstituencies = districtData[distName].map(name => name.trim().toLowerCase());
 
-        init();
-    </script>
+        const filtered = {
+            type: "FeatureCollection",
+            features: fullGeo.features.filter(f => {
+                const acName = (f.properties.ac_name || f.properties.AC_NAME || "").trim().toLowerCase();
+                return targetConstituencies.includes(acName);
+            })
+        };
+
+        geoLayer = L.geoJson(filtered, {
+            style: (f) => {
+                const acName = (f.properties.ac_name || f.properties.AC_NAME || "").trim().toLowerCase();
+                const partyData = resultsData[acName];
+                return {
+                    fillColor: getCol(partyData ? partyData.party : null),
+                    weight: 1, opacity: 1, color: '#0f172a', fillOpacity: 0.7
+                };
+            },
+            onEachFeature: (f, l) => {
+                l.on('mouseover', () => {
+                    const rawName = f.properties.ac_name || f.properties.AC_NAME;
+                    updateSidebar(rawName);
+                    l.setStyle({ fillOpacity: 0.9, weight: 2, color: '#ffffff' });
+                });
+                l.on('mouseout', () => {
+                    l.setStyle({ fillOpacity: 0.7, weight: 1, color: '#0f172a' });
+                });
+            }
+        }).addTo(map);
+        
+        map.fitBounds(geoLayer.getBounds());
+    }
+
+    function getCol(p) {
+        // TVK is yellow, AIADMK is green, DMK is red
+        return p === 'TVK' ? '#eab308' : p === 'AIADMK' ? '#16a34a' : p === 'DMK' ? '#ef4444' : '#334155';
+    }
+
+    function updateSidebar(rawAcName) {
+        const searchKey = rawAcName.trim().toLowerCase();
+        const d = resultsData[searchKey] || { candidate: 'Pending', party: 'N/A', margin: '0', status: 'Counting' };
+        
+        document.getElementById('side-ac').innerText = rawAcName;
+        document.getElementById('side-cand').innerText = d.candidate;
+        document.getElementById('side-party').innerText = d.party;
+        document.getElementById('side-margin').innerText = d.margin;
+        document.getElementById('side-margin').className = `text-3xl font-black ${String(d.margin).includes('-') ? 'text-red-500' : 'text-green-500'}`;
+        document.getElementById('side-status').innerText = d.status;
+    }
+
+    let sec = 60;
+    setInterval(() => {
+        sec--;
+        document.getElementById('timer').innerText = sec;
+        if (sec <= 0) { location.reload(); }
+    }, 1000);
+
+    init();
+</script>
 </body>
 </html>
