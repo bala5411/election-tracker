@@ -93,7 +93,7 @@
 
             geoLayer = L.geoJson(filtered, {
                 style: (f) => ({
-                    fillColor: getCol(resultsData[f.properties.AC_NAME]?.party),
+                    fillColor: getCol(resultsData[f.properties.ac_name]?.party),
                     weight: 1, opacity: 1, color: '#0f172a', fillOpacity: 0.7
                 }),
                 onEachFeature: (f, l) => {
